@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "scheme": "sprint-stack",
+    "userInterfaceStyle": "automatic",
+    "orientation": "default",
+    "web": {
+      "bundler": "metro"
+    },
+    "name": "sprint-stack",
+    "slug": "sprint-stack",
+    "plugins": ["expo-font"],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}

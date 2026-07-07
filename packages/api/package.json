@@ -1,0 +1,28 @@
+{
+  "name": "@sprint-stack/api",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@orpc/client": "catalog:",
+    "@orpc/openapi": "catalog:",
+    "@orpc/server": "catalog:",
+    "@orpc/zod": "catalog:",
+    "@sprint-stack/auth": "workspace:*",
+    "@sprint-stack/db": "workspace:*",
+    "@sprint-stack/env": "workspace:*",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@sprint-stack/config": "workspace:*",
+    "typescript": "^6"
+  }
+}
