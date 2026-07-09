@@ -7,22 +7,26 @@ import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { tanstackStartCookies } from "better-auth/tanstack-start";
 
 export function createAuth() {
-  const db = createDb();
+	const db = createDb();
 
-  return betterAuth({
-    database: drizzleAdapter(db, {
-      provider: "pg",
-
-      schema: schema,
-    }),
-    trustedOrigins: [env.CORS_ORIGIN, "sprint-stack://", "exp://", "http://localhost:8081"],
-    emailAndPassword: {
-      enabled: true,
-    },
-    secret: env.BETTER_AUTH_SECRET,
-    baseURL: env.BETTER_AUTH_URL,
-    plugins: [tanstackStartCookies(), expo()],
-  });
+	return betterAuth({
+		baseURL: env.BETTER_AUTH_URL,
+		database: drizzleAdapter(db, {
+			provider: "pg",
+			schema,
+		}),
+		emailAndPassword: {
+			enabled: true,
+		},
+		plugins: [expo(), tanstackStartCookies()],
+		secret: env.BETTER_AUTH_SECRET,
+		trustedOrigins: [
+			env.CORS_ORIGIN,
+			"sprint-stack://",
+			"exp://",
+			"http://localhost:8081",
+		],
+	});
 }
 
 export const auth = createAuth();
