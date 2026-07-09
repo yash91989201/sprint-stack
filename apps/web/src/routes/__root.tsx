@@ -1,66 +1,80 @@
 import { Toaster } from "@sprint-stack/ui/components/sonner";
+import { TooltipProvider } from "@sprint-stack/ui/components/tooltip";
 import type { QueryClient } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { HeadContent, Outlet, Scripts, createRootRouteWithContext } from "@tanstack/react-router";
+import {
+	createRootRouteWithContext,
+	HeadContent,
+	Outlet,
+	Scripts,
+} from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import { createMiddleware } from "@tanstack/react-start";
 import { evlogErrorHandler } from "evlog/nitro/v3";
+import Header from "@/components/header";
+import appCss from "@/index.css?url";
+import type { orpcClient, queryUtils } from "@/utils/orpc";
 
-import type { orpc } from "@/utils/orpc";
-
-import Header from "../components/header";
-
-import appCss from "../index.css?url";
 export interface RouterAppContext {
-  orpc: typeof orpc;
-  queryClient: QueryClient;
+	orpcClient: typeof orpcClient;
+	queryClient: QueryClient;
+	queryUtils: typeof queryUtils;
 }
 
 export const Route = createRootRouteWithContext<RouterAppContext>()({
-  server: {
-    middleware: [createMiddleware().server(evlogErrorHandler)],
-  },
-
-  head: () => ({
-    meta: [
-      {
-        charSet: "utf-8",
-      },
-      {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1",
-      },
-      {
-        title: "My App",
-      },
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-    ],
-  }),
-
-  component: RootDocument,
+	component: RootDocument,
+	head: () => ({
+		links: [
+			{
+				href: appCss,
+				rel: "stylesheet",
+			},
+		],
+		meta: [
+			{
+				charSet: "utf-8",
+			},
+			{
+				content: "width=device-width, initial-scale=1",
+				name: "viewport",
+			},
+			{
+				title: "Sprint Stack",
+			},
+		],
+	}),
+	server: {
+		middleware: [createMiddleware().server(evlogErrorHandler)],
+	},
+	shellComponent: ShellComponent,
 });
 
+function ShellComponent({ children }: { children: React.ReactNode }) {
+	return (
+		<html className="dark" lang="en">
+			<head>
+				<HeadContent />
+			</head>
+			<body>
+				<TooltipProvider>
+					{children}
+					<Scripts />
+				</TooltipProvider>
+			</body>
+		</html>
+	);
+}
+
 function RootDocument() {
-  return (
-    <html lang="en" className="dark">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        <div className="grid h-svh grid-rows-[auto_1fr]">
-          <Header />
-          <Outlet />
-        </div>
-        <Toaster richColors />
-        <TanStackRouterDevtools position="bottom-left" />
-        <ReactQueryDevtools position="bottom" buttonPosition="bottom-right" />
-        <Scripts />
-      </body>
-    </html>
-  );
+	return (
+		<>
+			<div className="grid h-svh grid-rows-[auto_1fr]">
+				<Header />
+				<Outlet />
+			</div>
+			<Toaster richColors />
+			<TanStackRouterDevtools position="bottom-left" />
+			<ReactQueryDevtools buttonPosition="bottom-right" position="bottom" />
+		</>
+	);
 }
