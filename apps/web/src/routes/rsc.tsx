@@ -16,11 +16,11 @@ const getServerGreeting = createServerFn({ method: "GET" }).handler(
 );
 
 export const Route = createFileRoute("/rsc")({
+	component: RscDemoPage,
 	loader: async () => {
 		const { Renderable } = await getServerGreeting();
 		return { Greeting: Renderable };
 	},
-	component: RscDemoPage,
 });
 
 function RscDemoPage() {

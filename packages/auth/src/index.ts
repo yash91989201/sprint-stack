@@ -40,7 +40,6 @@ export function createAuth() {
 					enabled: true,
 				},
 			}),
-			tanstackStartCookies(),
 			twoFactor(),
 			username(),
 			magicLink({
@@ -52,9 +51,20 @@ export function createAuth() {
 			}),
 			haveIBeenPwned(),
 			lastLoginMethod(),
-			multiSession({ maximumSessions: 3 }),
+			multiSession({ maximumSessions: 5 }),
+			tanstackStartCookies(),
 		],
 		secret: env.BETTER_AUTH_SECRET,
+		socialProviders: {
+			github: {
+				clientId: env.GITHUB_CLIENT_ID,
+				clientSecret: env.GITHUB_CLIENT_SECRET,
+			},
+			google: {
+				clientId: env.GOOGLE_CLIENT_ID,
+				clientSecret: env.GOOGLE_CLIENT_SECRET,
+			},
+		},
 		trustedOrigins: [
 			env.CORS_ORIGIN,
 			"sprint-stack://",

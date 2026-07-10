@@ -13,6 +13,7 @@
     "@orpc/server": "^1.14.7",
     "@orpc/tanstack-query": "^1.14.7",
     "@orpc/zod": "^1.14.7",
+    "@remixicon/react": "^4.9.0",
     "@sprint-stack/api": "workspace:*",
     "@sprint-stack/auth": "workspace:*",
     "@sprint-stack/env": "workspace:*",
