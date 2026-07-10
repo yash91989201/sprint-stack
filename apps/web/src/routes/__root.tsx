@@ -1,17 +1,16 @@
 import { Toaster } from "@sprint-stack/ui/components/sonner";
 import { TooltipProvider } from "@sprint-stack/ui/components/tooltip";
 import type { QueryClient } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import {
 	createRootRouteWithContext,
 	HeadContent,
 	Outlet,
 	Scripts,
 } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import { createMiddleware } from "@tanstack/react-start";
 import { evlogErrorHandler } from "evlog/nitro/v3";
 import Header from "@/components/header";
+import { TanstackDevtools } from "@/components/tanstack-devtools";
 import appCss from "@/index.css?url";
 import type { orpcClient, queryUtils } from "@/utils/orpc";
 
@@ -73,8 +72,7 @@ function RootDocument() {
 				<Outlet />
 			</div>
 			<Toaster richColors />
-			<TanStackRouterDevtools position="bottom-left" />
-			<ReactQueryDevtools buttonPosition="bottom-right" position="bottom" />
+			<TanstackDevtools />
 		</>
 	);
 }

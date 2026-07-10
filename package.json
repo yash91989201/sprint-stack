@@ -56,6 +56,9 @@
   "devDependencies": {
     "@biomejs/biome": "2.5.3",
     "@sprint-stack/config": "workspace:*",
+    "@tanstack/react-devtools": "^0.10.8",
+    "@tanstack/react-form-devtools": "^0.2.29",
+    "@tanstack/react-pacer-devtools": "^0.7.1",
     "@types/node": "^26.1.1",
     "lefthook": "^2.1.10",
     "nx": "^23.0.1",
