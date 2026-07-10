@@ -17,15 +17,15 @@
   },
   "dependencies": {
     "@sprint-stack/env": "workspace:*",
-    "dotenv": "catalog:",
+    "dotenv": "^17.4.2",
     "drizzle-orm": "^0.45.2",
     "pg": "^8.22.0",
-    "zod": "catalog:"
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@sprint-stack/config": "workspace:*",
     "@types/pg": "^8.20.0",
     "drizzle-kit": "^0.31.10",
-    "typescript": "^6"
+    "typescript": "^7.0.2"
   }
 }

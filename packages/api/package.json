@@ -11,18 +11,18 @@
   },
   "scripts": {},
   "dependencies": {
-    "@orpc/client": "catalog:",
-    "@orpc/openapi": "catalog:",
-    "@orpc/server": "catalog:",
-    "@orpc/zod": "catalog:",
+    "@orpc/client": "^1.14.7",
+    "@orpc/openapi": "^1.14.7",
+    "@orpc/server": "^1.14.7",
+    "@orpc/zod": "^1.14.7",
     "@sprint-stack/auth": "workspace:*",
     "@sprint-stack/db": "workspace:*",
     "@sprint-stack/env": "workspace:*",
-    "dotenv": "catalog:",
-    "zod": "catalog:"
+    "dotenv": "^17.4.2",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@sprint-stack/config": "workspace:*",
-    "typescript": "^6"
+    "typescript": "^7.0.2"
   }
 }
