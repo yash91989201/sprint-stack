@@ -1,8 +1,10 @@
 {
+  "$schema": "https://raw.githubusercontent.com/can1357/oh-my-pi/main/packages/coding-agent/src/config/mcp-schema.json",
   "mcpServers": {
     "better-t-stack": {
       "command": "bunx",
-      "args": ["create-better-t-stack@latest", "mcp"]
+      "args": ["create-better-t-stack@latest", "mcp"],
+      "enabled": false
     },
     "context7": {
       "command": "npx",
@@ -10,7 +12,8 @@
     },
     "nx": {
       "command": "npx",
-      "args": ["nx", "mcp", "."]
+      "args": ["nx", "mcp", "."],
+      "enabled": false
     },
     "shadcn": {
       "command": "npx",
@@ -18,11 +21,13 @@
     },
     "better-auth": {
       "type": "http",
-      "url": "https://mcp.inkeep.com/better-auth/mcp"
+      "url": "https://mcp.inkeep.com/better-auth/mcp",
+      "enabled": false
     },
     "expo-mcp": {
       "type": "http",
-      "url": "https://mcp.expo.dev/mcp"
+      "url": "https://mcp.expo.dev/mcp",
+      "enabled": false
     }
   }
 }
