@@ -7,7 +7,7 @@ description: Form implementation conventions for the sprint-stack monorepo using
 
 ## Project Structure
 
-- **Schemas** → `src/lib/schemas/` (one per file, no nested dirs)
+- **Schemas** → `src/lib/schemas/` grouped by domain (e.g., `auth.ts`, `workspace.ts`) — see the sprint-schema skill for the full rule
 - **Types** → `src/lib/types.ts` (auto-generated, do not edit)
 - **Form Components** → co-located in feature folders
 
@@ -106,7 +106,7 @@ The custom form wrapper provides these field components:
 All field components accept:
 
 - `label` (required) — Field label
-- `description` (optional) — Help text below label
+- `description` (optional) — Help text below field
 - Plus all standard HTML input props
 
 ## Simple vs Complex Forms

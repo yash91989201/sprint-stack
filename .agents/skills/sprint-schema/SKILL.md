@@ -10,8 +10,8 @@ description: Schema and type conventions for the sprint-stack monorepo. Use when
 1. **Always use Zod** for schema definitions. No hand-written types for data shapes.
 2. **Types are auto-generated** in `src/lib/types.ts` — never edit this file manually.
 3. **Import types from `@/lib/types`**, never directly from schema files.
-4. **One schema per file** in `src/lib/schemas/` — no nested directories.
-5. **Filenames**: lowercase with dashes or underscores (e.g., `user-form.ts`).
+4. **Group schemas by domain** in `src/lib/schemas/` — one file per domain (e.g., all auth-related schemas live in `auth.ts`, all workspace-related schemas in `workspace.ts`). Don't split a single domain across many one-schema files; don't lump unrelated domains together. No nested directories.
+5. **Filenames**: lowercase, single domain noun (e.g., `auth.ts`, `workspace.ts`, `user.ts`). Dashes allowed for compound names (e.g., `user-profile.ts`).
 
 ## Schema Definition
 
@@ -59,9 +59,10 @@ The **server** maintains its own parallel structure:
 src/
   lib/
     schemas/
-      user.ts
-      user-form.ts
-    types.ts          ← auto-generated, do not edit
+      auth.ts          ← login, signup, magic-link, 2fa, password-reset, ...
+      workspace.ts     ← create-workspace, invite-member, workspace-settings, ...
+      issue.ts         ← create-issue, update-issue, comment, ...
+    types.ts           ← auto-generated, do not edit
 
 server/
   src/
