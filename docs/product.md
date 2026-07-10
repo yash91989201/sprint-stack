@@ -2,304 +2,52 @@
 
 ## Product Overview
 
-Sprint Stack is a modern project management and issue tracking platform inspired by the speed of Linear, the hierarchy of GitHub Issues, and the collaboration features found in modern SaaS tools.
+Sprint Stack is a fast, keyboard-first project management and issue tracking platform for software teams. It combines the speed of Linear, the hierarchy of GitHub Issues, and modern collaboration tools into one workspace where teams can plan work, track bugs, manage releases, and monitor progress.
 
-The goal is to provide a fast, keyboard-first workspace where software teams can plan work, track bugs, collaborate, manage releases, and monitor progress.
+## Who it's for
+
+Sprint Stack is built for small-to-medium software teams — engineers, designers, product managers, and team leads — who want a lean issue tracker without the bloat of enterprise project management tools.
+
+## Product principles
+
+- **Keyboard first.** Most actions should be reachable through shortcuts and the command palette.
+- **Fast.** Navigation, search, and issue updates should feel instant.
+- **Hierarchical issues.** Issues support types, relationships, and structure that mirror real product work.
+- **Collaborative.** Mentions, comments, notifications, and activity history keep the team in sync.
+- **Focused.** No unnecessary complexity; every feature earns its place.
+
+## Where to start
+
+For the first shipping scope, see the [**MVP roadmap**](./mvp.md).
+
+## Core modules
+
+1. [**Authentication**](./modules/authentication.md) — sign-up, login, email verification, forgot password, sessions, and invite acceptance.
+2. [**Workspaces**](./modules/workspaces.md) — workspace creation, branding, member invites, directory, roles, and switching.
+3. [**Teams**](./modules/teams.md) — team profiles, leads, members, and team-level issue assignment.
+4. [**Projects**](./modules/projects.md) — public/private projects, icons, status, archive/restore, templates, and overview pages.
+5. [**Issues**](./modules/issues.md) — issue types, hierarchy, subtasks, rich descriptions, labels, priority, status, assignees, and history.
+6. [**Status Workflow**](./modules/status-workflow.md) — default statuses and custom statuses that drive work tracking.
+7. [**Labels**](./modules/labels.md) — workspace and project labels with colors, icons, groups, and usage counts.
+8. [**Milestones**](./modules/milestones.md) — release planning, deadlines, progress tracking, and open/closed counts.
+9. [**Views**](./modules/views.md) — Kanban, list, timeline, calendar, roadmap, backlog, archive, and My Work.
+10. [**Dashboard**](./modules/dashboard.md) — personal overview with assigned issues, created issues, activity, milestones, and quick create.
+11. [**Comments**](./modules/comments.md) — markdown comments, replies, mentions, reactions, edit history, and attachments.
+12. [**Rich Editor**](./modules/rich-editor.md) — markdown editing with tables, media, links, code blocks, mentions, and slash commands.
+13. [**Attachments**](./modules/attachments.md) — drag-and-drop uploads, image/PDF previews, downloads, and version replacement.
+14. [**Notifications**](./modules/notifications.md) — in-app and email notifications for assignments, mentions, replies, and status changes.
+15. [**Activity Timeline**](./modules/activity-timeline.md) — complete audit history of issue, status, assignment, label, and milestone changes.
+16. [**Search**](./modules/search.md) — global instant search across issues, projects, users, comments, and saved searches.
+17. [**Filters**](./modules/filters.md) — filter by status, priority, labels, assignee, reporter, project, milestone, team, and dates.
+18. [**Roadmaps**](./modules/roadmaps.md) — timeline visualization of epics, dependencies, progress, and release planning.
+19. [**User Profiles**](./modules/user-profiles.md) — avatars, bios, timezones, language, keyboard shortcuts, themes, and activity.
+20. [**Settings**](./modules/settings.md) — appearance, notifications, security, connected accounts, sessions, API keys, and webhooks.
+21. [**Productivity**](./modules/productivity.md) — keyboard shortcuts, command palette, quick create, bulk actions, pinning, and favorites.
+22. [**Admin**](./modules/admin.md) — workspace analytics, user management, audit logs, invites, billing, and storage.
+23. [**Reporting**](./modules/reporting.md) — velocity, completion rate, burndown, workload, and project progress.
+24. [**Integrations**](./modules/integrations.md) — GitHub, Slack, Discord, webhooks, and public API.
+25. [**Future Enhancements**](./modules/future-enhancements.md) — AI features, time tracking, sprints, recurring tasks, mobile, offline, and real-time collaboration.
 
 ---
 
-# Core Modules
-
-## Authentication
-
-- Email & password
-- Google & GitHub OAuth
-- Magic link login
-- Forgot password
-- Email verification
-- Multi-session support
-- Session management
-- Invite acceptance
-- Account deletion
-- Profile onboarding
-
-## Workspaces
-
-- Create multiple workspaces
-- Workspace logo, icon and branding
-- Invite members
-- Member directory
-- Teams
-- Roles & permissions
-- Archived workspaces
-- Favorites
-- Workspace switching
-
-## Dashboard
-
-- My Issues
-- Assigned to Me
-- Created by Me
-- Recent Activity
-- Upcoming Milestones
-- Favorite Projects
-- Quick Create
-- Pinned Items
-- Recently Viewed
-
-## Projects
-
-- Unlimited projects
-- Public/Private projects
-- Project icon & color
-- Description
-- Status
-- Archive/Restore
-- Templates
-- Overview page
-- Activity feed
-- Team assignment
-- Project health
-- Project statistics
-
-## Issues
-
-- Bug
-- Feature
-- Task
-- Epic
-- Spike
-- Research
-- Story
-- Subtasks
-- Parent/child relationships
-- Rich descriptions
-- Markdown
-- Checklists
-- Labels
-- Priority
-- Status
-- Estimates
-- Due dates
-- Assignee(s)
-- Reporter
-- Watchers
-- Attachments
-- Followers
-- Duplicate detection
-- Issue history
-- Related issues
-- Dependencies
-- Bookmarks
-
-## Views
-
-- Kanban Board
-- List View
-- Timeline
-- Calendar
-- Roadmap
-- My Work
-- Backlog
-- Archive
-
-## Status Workflow
-
-- Backlog
-- Todo
-- In Progress
-- Review
-- QA
-- Blocked
-- Done
-- Archived
-- Custom statuses
-
-## Labels
-
-- Workspace labels
-- Project labels
-- Colors
-- Icons
-- Descriptions
-- Usage count
-- Label groups
-
-## Milestones
-
-- Release planning
-- Deadlines
-- Progress tracking
-- Completion %
-- Closed/open counts
-
-## Comments
-
-- Markdown
-- Replies
-- Mentions
-- Emoji reactions
-- Edit history
-- Attachments
-- Code blocks
-- Task lists
-
-## Rich Editor
-
-- Markdown
-- Tables
-- Images
-- Videos
-- Links
-- Code blocks
-- Inline code
-- Quotes
-- Emojis
-- Slash commands
-- Mentions
-
-## Attachments
-
-- Drag & drop
-- Image preview
-- PDF preview
-- Downloads
-- Version replacement
-
-## Search
-
-- Global search
-- Instant results
-- Search issues
-- Search projects
-- Search users
-- Search comments
-- Saved searches
-- Advanced filters
-
-## Filters
-
-- Status
-- Priority
-- Labels
-- Assignee
-- Reporter
-- Project
-- Milestone
-- Team
-- Date ranges
-- Custom combinations
-- Shareable URLs
-
-## Notifications
-
-- Assignments
-- Mentions
-- Replies
-- Status changes
-- Milestone updates
-- Project activity
-- Notification preferences
-- Inbox
-- Read/unread
-- Email notifications
-
-## Activity Timeline
-
-- Issue created
-- Status changed
-- Assignment changes
-- Priority changes
-- Comments
-- Label updates
-- Attachments
-- Milestone changes
-- Complete audit history
-
-## Teams
-
-- Team profiles
-- Team leads
-- Team members
-- Team issue assignment
-- Team workload
-
-## Roadmaps
-
-- Timeline visualization
-- Epics
-- Dependencies
-- Progress
-- Release planning
-
-## User Profiles
-
-- Avatar
-- Bio
-- Timezone
-- Language
-- Keyboard shortcuts
-- Theme preference
-- Activity history
-
-## Settings
-
-- Appearance
-- Theme
-- Notification settings
-- Security
-- Connected accounts
-- Sessions
-- API keys
-- Webhooks
-
-## Admin
-
-- Workspace analytics
-- User management
-- Audit logs
-- Billing placeholder
-- Storage usage
-- Invite management
-
-## Integrations
-
-- GitHub
-- Slack
-- Discord
-- Webhooks
-- Public API
-
-## Productivity
-
-- Keyboard shortcuts
-- Command palette
-- Quick create
-- Bulk actions
-- Multi-select
-- Drag & drop
-- Pinning
-- Favorites
-- Recently viewed
-
-## Reporting
-
-- Issue velocity
-- Completion rate
-- Burndown
-- Open vs closed
-- Team workload
-- Project progress
-
-## Future Enhancements
-
-- AI issue summaries
-- AI sprint planning
-- AI duplicate detection
-- AI search assistant
-- Time tracking
-- Sprint planning
-- Recurring tasks
-- Mobile application
-- Offline mode
-- Real-time collaboration
+For the scope of the first release, read [**MVP**](./mvp.md). For longer-term ideas, see [**Future Enhancements**](./modules/future-enhancements.md).
