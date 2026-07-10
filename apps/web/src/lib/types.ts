@@ -1,14 +1,16 @@
-import type z from "zod";
-import type { CreateWorkspaceFormSchema } from "./schemas/create-workspace-form";
+// AUTO-GENERATED FILE. DO NOT EDIT.
+// Run `bun run generate:types` to refresh
+import type { z } from "zod";
 import type {
 	LogInFormSchema,
 	MagicLinkFormSchema,
-} from "./schemas/login-form";
-import type { SignUpFormSchema } from "./schemas/signup-form";
-import type { TwoFactorFormSchema } from "./schemas/two-factor-form";
+	SignUpFormSchema,
+	TwoFactorFormSchema,
+} from "./schemas/auth";
+import type { CreateWorkspaceFormSchema } from "./schemas/workspace";
 
+export type CreateWorkspaceFormType = z.infer<typeof CreateWorkspaceFormSchema>;
 export type LogInFormType = z.infer<typeof LogInFormSchema>;
 export type MagicLinkFormType = z.infer<typeof MagicLinkFormSchema>;
 export type SignUpFormType = z.infer<typeof SignUpFormSchema>;
 export type TwoFactorFormType = z.infer<typeof TwoFactorFormSchema>;
-export type CreateWorkspaceFormType = z.infer<typeof CreateWorkspaceFormSchema>;
