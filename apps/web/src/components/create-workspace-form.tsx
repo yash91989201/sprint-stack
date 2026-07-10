@@ -7,7 +7,7 @@ import { useNavigate } from "@tanstack/react-router";
 import { toast } from "sonner";
 
 import { authClient } from "@/lib/auth-client";
-import { CreateWorkspaceFormSchema } from "@/lib/schemas/create-workspace-form";
+import { CreateWorkspaceFormSchema } from "@/lib/schemas/workspace";
 import type { CreateWorkspaceFormType } from "@/lib/types";
 
 const formOpts = formOptions({

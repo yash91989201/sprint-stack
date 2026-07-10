@@ -13,7 +13,7 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useCallback } from "react";
 import { toast } from "sonner";
 import { authClient } from "@/lib/auth-client";
-import { TwoFactorFormSchema } from "@/lib/schemas/two-factor-form";
+import { TwoFactorFormSchema } from "@/lib/schemas/auth";
 import type { TwoFactorFormType } from "@/lib/types";
 
 export const Route = createFileRoute("/2fa")({

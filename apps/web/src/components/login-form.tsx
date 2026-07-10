@@ -14,7 +14,7 @@ import { formOptions } from "@tanstack/react-form";
 import { Link, useNavigate } from "@tanstack/react-router";
 import { toast } from "sonner";
 import { authClient } from "@/lib/auth-client";
-import { LogInFormSchema, MagicLinkFormSchema } from "@/lib/schemas/login-form";
+import { LogInFormSchema, MagicLinkFormSchema } from "@/lib/schemas/auth";
 import type { LogInFormType, MagicLinkFormType } from "@/lib/types";
 import Loader from "./loader";
 
